@@ -10,9 +10,9 @@
 name: OpenWrt-CI
 
 on:
- # push:
- #   branches: 
- #     - CI-demo
+  push:
+    branches: 
+      - master
   #     ↑↑↑ 改成你的分支名, 一般是master
   # schedule:
   #   - cron: 0 20 * * *
@@ -27,7 +27,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
         with:
-          ref: CI-demo
+          ref: master
         #      ↑↑↑ 改成你的分支名, 一般是master
 
       - name: Initialization environment
